@@ -39,12 +39,12 @@ export default function RootLayout({
           <header className="flex justify-end items-center px-4 gap-4">
             <SignedOut>
               <SignInButton>
-                <button className="hover:underline active:font-semibold">
+                <button className="hover:underline active:text-amber-300">
                   Sign In
                 </button>
               </SignInButton>
               <SignUpButton>
-                <button className="hover:underline active:font-semibold">
+                <button className="hover:underline active:text-amber-300">
                   Sign Up
                 </button>
               </SignUpButton>
