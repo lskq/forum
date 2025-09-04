@@ -2,7 +2,9 @@
 import { client } from "@/sanity/client";
 
 export default async function push(formData: FormData) {
+    const author = formData.get("author");
     const text = formData.get("text");
+    console.log(author);
 
     if (text === null || text === "") return;
 
@@ -10,7 +12,7 @@ export default async function push(formData: FormData) {
 
     const doc = {
         _type: "post",
-        author: "Anonymous",
+        author: author,
         publishedAt: new Date(),
         body: text,
     }
