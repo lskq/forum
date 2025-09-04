@@ -13,7 +13,7 @@ export default async function IndexPage() {
         <Posts />
       </main>
       <footer className="text-center text-sm pb-2">
-        <p>© 2025. Website design is my passion.</p>
+        <p>© 2025. Web design is my passion.</p>
       </footer>
     </>
   );
