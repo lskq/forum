@@ -1,24 +1,7 @@
-import Link from "next/link";
-import { type SanityDocument } from "next-sanity";
-
-import { client } from "@/sanity/client";
-
-import Post from "../components/post"
 import Input from "../components/input"
-
-const POSTS_QUERY = `*[
-  _type == "post"
-]|order(publishedAt desc)[0...12]{_id, author, publishedAt, body}`;
-
-const options = { next: { revalidate: 30 } };
-
-const windowState = {isActive: false}
+import Posts from "../components/posts"
 
 export default async function IndexPage() {
-  const postsData = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
-
-  const postsMarkup = postsData.map(post => { return ( <Post key={post._id} author={post.author} publishedAt={new Date(post.publishedAt).toLocaleString()} body={post.body}/> ) });
-
   return (
     <>
       <header className="text-center border-b-1 mb-4">
@@ -27,7 +10,7 @@ export default async function IndexPage() {
       </header>
       <main className="px-2">
         <Input />
-        {postsMarkup}
+        <Posts />
       </main>
     </>
   );
