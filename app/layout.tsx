@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Forum | It's a forum",
-  description: "The least secure forum ever, guaranteed!",
+  title: "Forum | More of a thread, really",
+  description: "Insecurity guaranteed!",
 };
 
 export default function RootLayout({
