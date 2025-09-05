@@ -13,7 +13,7 @@ export default function input() {
 
     const submit = (x: FormData) => {
         push(x);
-        setTimeout(() => router.refresh(), 2000);
+        setTimeout(() => router.refresh(), 1000);
     }
 
     return (
