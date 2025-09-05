@@ -5,7 +5,7 @@ import Post from "./post"
 
 const POSTS_QUERY = `*[
   _type == "post"
-]|order(publishedAt desc)[0...12]{_id, author, publishedAt, body}`;
+]|order(publishedAt desc){_id, author, publishedAt, body}`;
 
 export default async function Posts() {
     const postsData = await client.fetch<SanityDocument[]>(POSTS_QUERY, {});
