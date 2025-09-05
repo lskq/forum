@@ -23,5 +23,5 @@ idea if any of it is secure, and I don't think letting anyone post anything
 with no content filtering or moderation is a good idea. I'm definitely taking
 the deployment down once I've had the project assessed.
 - The styling is immaculate and I will not hear otherwise. It works in both
-light mode and dark mode, on mobile and desktop, and it's accessible for
-every type of color blindness!
+light mode and dark mode, on mobile and desktop, it's high contrast, and it's
+even color blind-accessible!
